@@ -1,0 +1,260 @@
+:root {
+  --primary-color: #07a5fe;
+  --primary-dark: #0588d0;
+  --dark-color: #2c2c2c;
+  --bg-color: #f4f6fb;
+  --card-color: #ffffff;
+  --line-color: #dfe5f0;
+  --text-color: #18202a;
+  --muted-color: #6d7988;
+  --warning-color: #ff9f43;
+  --success-color: #16c47f;
+  --danger-color: #ff5f5f;
+  --info-color: #3a86ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(180deg, #f6f8fc 0%, #edf2f9 100%);
+  color: var(--text-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.main__content {
+  width: min(1180px, calc(100vw - 40px));
+  margin: 0 auto;
+}
+
+.page__section {
+  padding: 34px 0 12px;
+}
+
+.alert {
+  padding: 14px 16px;
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.alert--success {
+  background: rgba(22, 196, 127, 0.12);
+  color: #0f8d5c;
+}
+
+.alert--danger {
+  background: rgba(255, 95, 95, 0.12);
+  color: #cf3636;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.badge--success {
+  background: rgba(22, 196, 127, 0.12);
+  color: var(--success-color);
+}
+
+.badge--warning {
+  background: rgba(255, 159, 67, 0.16);
+  color: #b97726;
+}
+
+.badge--danger {
+  background: rgba(255, 95, 95, 0.14);
+  color: var(--danger-color);
+}
+
+.badge--primary {
+  background: rgba(7, 165, 254, 0.12);
+  color: var(--primary-color);
+}
+
+.badge--info {
+  background: rgba(58, 134, 255, 0.12);
+  color: var(--info-color);
+}
+
+.badge--neutral {
+  background: rgba(109, 121, 136, 0.14);
+  color: #526072;
+}
+
+.card__meta {
+  color: var(--muted-color);
+  font-size: 14px;
+}
+
+.map__empty {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px dashed #d6e0ec;
+  color: var(--muted-color);
+  background: #ffffff;
+}
+
+.route-note {
+  margin-top: 10px;
+  color: var(--muted-color);
+  font-size: 14px;
+}
+
+.map__popup h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.map__popup p {
+  margin: 0;
+  color: var(--muted-color);
+  line-height: 1.5;
+}
+
+.map__popup-actions,
+.map__mini-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.map__popup-action,
+.map__popup-link,
+.map__mini-action,
+.map__mini-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.map__popup-action {
+  background: rgba(7, 165, 254, 0.1);
+  color: var(--primary-color);
+}
+
+.map__popup-link,
+.map__mini-action,
+.map__mini-link {
+  background: #ffffff;
+  color: var(--text-color);
+  border: 1px solid #dbe5f2;
+}
+
+.map__popup-placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--muted-color);
+  font-size: 24px;
+}
+
+.nearby__item {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid #e8eef7;
+  margin-bottom: 10px;
+  background: #ffffff;
+  cursor: pointer;
+  text-align: left;
+}
+
+.nearby__item:hover,
+.nearby__item.active {
+  background: rgba(7, 165, 254, 0.08);
+  border-color: rgba(7, 165, 254, 0.35);
+}
+
+.nearby__item strong {
+  display: block;
+}
+
+.map-marker {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.map-marker--vehicle {
+  background: var(--primary-color);
+}
+
+.map-marker--vehicle-busy,
+.map-marker--vehicle-maintenance {
+  background: var(--warning-color);
+}
+
+.map-marker--vehicle-paused,
+.map-marker--parking-paused {
+  background: #7b8796;
+}
+
+.map-marker--customer,
+.map-marker--user {
+  background: var(--danger-color);
+}
+
+.map-marker--parking {
+  background: var(--success-color);
+}
+
+.leaflet-container {
+  cursor: grab;
+  user-select: none;
+}
+
+.leaflet-container:active,
+.leaflet-grab,
+.leaflet-dragging .leaflet-container {
+  cursor: grabbing;
+}
+
+.is-hidden {
+  display: none !important;
+}
